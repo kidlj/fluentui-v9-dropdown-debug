@@ -1,0 +1,57 @@
+.container {
+	display: flex;
+	height: 100%;
+}
+
+.sidebar {
+	width: 400px;
+	height: 100%;
+	background-color: #f0f0f0;
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.content {
+	flex: 1;
+	height: 100%;
+	overflow-y: auto;
+	padding-left: 400px;
+}
+
+.dialog {
+	min-width: 1000px;
+}
+
+.dialogbody {
+	width: 100%;
+	height: 800px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+	width: 100%;
+}
+
+.inputgroupheader {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.inputgroup {
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	max-width: 400px;
+
+	>div {
+		display: flex;
+		flex-direction: column;
+		row-gap: 4px;
+	}
+}
