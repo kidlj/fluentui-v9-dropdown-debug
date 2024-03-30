@@ -6,6 +6,7 @@ import {
 	AccordionPanel,
 } from "@fluentui/react-components";
 
+
 export default () => (
 	<Accordion collapsible>
 		<AccordionItem value="1">
