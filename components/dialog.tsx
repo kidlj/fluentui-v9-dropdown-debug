@@ -11,7 +11,7 @@ import {
 	useRestoreFocusTarget,
 } from "@fluentui/react-components";
 import styles from '@/styles/page.module.scss';
-import { EditFrom } from "@/pages/project/form";
+import { ProjectForm } from "@/components/form";
 
 export const EditDialog = () => {
 	const [open, setOpen] = React.useState(false);
@@ -43,7 +43,7 @@ export const EditDialog = () => {
 						<DialogTitle>Dialog title</DialogTitle>
 						<DialogContent>
 							<div>
-								<EditFrom></EditFrom>
+								{/* <ProjectForm></ProjectForm> */}
 							</div>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam

@@ -7,7 +7,7 @@ import {
 } from "@fluentui/react-components";
 
 
-export default () => (
+export default function Job() {
 	<Accordion collapsible>
 		<AccordionItem value="1">
 			<AccordionHeader>Accordion Header 1</AccordionHeader>
@@ -16,4 +16,4 @@ export default () => (
 			</AccordionPanel>
 		</AccordionItem>
 	</Accordion>
-);
+};

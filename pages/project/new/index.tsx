@@ -1,10 +1,11 @@
 import styles from '@/styles/page.module.scss';
-import { EditFrom } from "@/pages/project/form";
+import {
+	ProjectForm
+} from "@/components/form";
 
-export default () => {
+export default function NewProject() {
 	return (
 		<div>
-			<EditFrom></EditFrom>
 		</div>
 	)
 }

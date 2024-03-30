@@ -1,5 +1,5 @@
-import type { Replica, Job } from "@/pages/job/types"
-import type { User } from "@/pages/user/types"
+import type { Replica, Job } from "@/types/job"
+import type { User } from "@/types/user"
 
 export type Project = {
 	id: number

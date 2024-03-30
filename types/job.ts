@@ -1,4 +1,4 @@
-import type { User } from "@/pages/user/types"
+import type { User } from "@/types/user"
 
 export type Replica = {
 	replicas: number

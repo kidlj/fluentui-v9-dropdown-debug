@@ -9,8 +9,8 @@ import {
 	Label,
 } from "@fluentui/react-components";
 import styles from '@/styles/page.module.scss';
-import { Project } from "./types";
-import { Replica } from "../job/types";
+import { Project } from "../types/project";
+import { Replica } from "../types/job";
 
 const formReducer = (state: Partial<Project>, action: { type: string; payload: any }) => {
 	switch (action.type) {
@@ -76,6 +76,8 @@ export const ProjectForm = (props: { edit: Partial<Project> }) => {
 		]
 	)
 
+	console.log(project.resources?.gpu_series)
+
 	return (
 		<div className={styles.form}>
 			<div className={styles.inputgroupheader}>
@@ -84,7 +86,7 @@ export const ProjectForm = (props: { edit: Partial<Project> }) => {
 			</div>
 			<div className={styles.inputgroup}>
 				<Field label="项目名称" required>
-					<Input value={project.name} />
+					<Input value={project.name} onChange={(e, data) => handleFieldChange('name', data.value)} />
 				</Field>
 
 				<Field label="项目描述">
@@ -110,7 +112,7 @@ export const ProjectForm = (props: { edit: Partial<Project> }) => {
 					</Field>
 
 					<Field label="GPU型号" required>
-						<Dropdown value={gpuSeriesOptions.get(project.resources.gpu_series!)} selectedOptions={[project.resources.gpu_series!]} onOptionSelect={(e, data) => handleReplicaChange('gpu_series', data.optionValue || "")}>
+						<Dropdown value={gpuSeriesOptions.get(project.resources.gpu_series!)} selectedOptions={[project.resources.gpu_series!]} onOptionSelect={(e, data) => handleReplicaChange('gpu_series', data.optionValue!)}>
 							{Array.from(gpuSeriesOptions).map(([key, text]) => (
 								<Option key={key} value={key}>{text}</Option>
 							))}
@@ -127,7 +129,7 @@ export const ProjectForm = (props: { edit: Partial<Project> }) => {
 						</Field>
 
 						<Field label="GPU型号" required>
-							<Dropdown value={gpuSeriesOptions.get(replica.gpu_series)} selectedOptions={[replica.gpu_series]} onOptionSelect={(e, data) => handleReplicaMapChange(key, 'gpu_series', data.optionValue || "")}>
+							<Dropdown value={gpuSeriesOptions.get(replica.gpu_series)} selectedOptions={[replica.gpu_series]} onOptionSelect={(e, data) => handleReplicaMapChange(key, 'gpu_series', data.optionValue!)}>
 								{Array.from(gpuSeriesOptions).map(([key, text]) => (
 									<Option key={key} value={key}>{text}</Option>
 								))}

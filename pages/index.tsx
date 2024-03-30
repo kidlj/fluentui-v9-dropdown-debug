@@ -1,8 +1,8 @@
 import * as React from "react";
 import styles from '@/styles/page.module.scss';
-import { EditDialog } from "@/pages/project/dialog";
+import { EditDialog } from "@/components/dialog";
 
-export default () => {
+export default function Home() {
 	return (
 		<div className={styles.container}>
 			<aside className={styles.sidebar}>

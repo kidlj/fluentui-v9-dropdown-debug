@@ -1,8 +1,8 @@
 import styles from '@/styles/page.module.scss';
-import { ProjectForm } from "@/pages/project/form";
-import { Replica } from '../job/types';
+import { ProjectForm } from "@/components/form";
+import { Replica } from '@/types/job';
 
-export default () => {
+export default function Project() {
 	const init = {
 		name: "",
 		training_type: "job",
